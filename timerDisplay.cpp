@@ -3,6 +3,7 @@
 #include "timerDisplay.h"
 #include "pinDefs.h"
 #include <SPI.h>
+#include <stdint.h>
 
 // 7-segment control bytes for decimal digits
 // ex: SEG_DIGIT[0] gives byte to write to shift register to display "0"
