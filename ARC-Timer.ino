@@ -9,7 +9,7 @@
 #include <SPI.h>
 
 // modules
-#include "timerDisplay.h"
+#include "display.h"
 
 void setup() {
   // initialize display (cleared on reset)

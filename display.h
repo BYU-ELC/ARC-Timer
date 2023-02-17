@@ -20,8 +20,8 @@
 //   _(4)_  .(0)
 //////////////////////////////
 
-#ifndef TIMER_DISPLAY
-#define TIMER_DISPLAY
+#ifndef DISPLAY_H
+#define DISPLAY_H
 
 #include <stdint.h>
 
@@ -45,4 +45,4 @@ void displayWriteBytes(uint8_t left, uint8_t middle, uint8_t right);
 // turn off all display segments
 void displayClear();
 
-#endif // TIMER_DISPLAY
+#endif // DISPLAY_H

@@ -1,6 +1,6 @@
 // Author: Ben Broce (BYU ECEn ELC)
 
-#include "timerDisplay.h"
+#include "display.h"
 #include "pinDefs.h"
 #include <SPI.h>
 #include <stdint.h>
