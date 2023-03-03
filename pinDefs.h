@@ -10,14 +10,22 @@
 
 // control button pins
 #define BTN_START_PIN 2 // with delay
-#define BTN_STOP_PIN 3
+#define BTN_PAUSE_PIN 3
 #define BTN_RESUME_PIN 4 // without delay
 #define BTN_ADD_30_SEC_PIN 5
 #define BTN_ADD_60_SEC_PIN 6
 #define BTN_MISC_PIN 7
 
 // infrared control signal pins
-#define IR_IN_PIN
-#define IR_OUT_PIN
+#define IR_IN_PIN A0
+#define IR_OUT_PIN A1
+
+// LED pins
+#define A2 LED_5_PIN
+#define A3 LED_4_PIN
+#define A4 LED_3_PIN
+#define A5 LED_2_PIN
+#define A6 LED_1_PIN
+#define A7 LED_GO_PIN
 
 #endif // PIN_DEFS_H

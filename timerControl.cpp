@@ -3,6 +3,9 @@
 
 #include "timerControl.h"
 #include "display.h"
+#include <Arduino.h>
+
+// #TIMER_CONTROL_DEBUG
 
 enum timerControlState_t { WAIT_ST, START_ST, COUNTDOWN_ST, PAUSE_ST, STOP_ST };
 static enum timerControlState_t currentState;
@@ -38,7 +41,11 @@ void timerControlTick() {
     break;
 
   default:
+#ifdef TIMER_CONTROL_DEBUG
     Serial.println("Invalid State\n");
+#else
+    break;
+#endif
   }
 
   // state action
@@ -69,7 +76,11 @@ void timerControlTick() {
     break;
 
   default:
+#ifdef TIMER_CONTROL_DEBUG
     Serial.println("Invalid State\n");
+#else
+    break;
+#endif
   }
 }
 
