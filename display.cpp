@@ -20,11 +20,27 @@ const uint8_t displayDigit[10] = {
     0xDE  // "9" - 11011110
 };
 
+/*
+middle
+dp
+BR*
+TL
+BL
+B
+BR
+TR
+*/
+
 // initialize the display hardware (call before writes)
 void displayInit() {
-  // release register values -> 7-seg output
+  // setup SPI bus for output
   pinMode(SHIFTREG_RCK_PIN, OUTPUT);
+  pinMode(SHIFTREG_SIN_PIN, OUTPUT);
+  pinMode(SHIFTREG_SRCK_PIN, OUTPUT);
+
+  // release register values -> 7-seg output
   digitalWrite(SHIFTREG_RCK_PIN, HIGH);
+
   // init SPI hardware
   // (set max data rate, MSB first, and
   // SPI_MODE1: clock idles low, bit write on rising clk)

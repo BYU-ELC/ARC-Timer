@@ -3,10 +3,12 @@
 
 // display control via shift registers (SRs) on SPI port
 // D10 (CS)   -> all SRs RCK latch pin
+#define SHIFTREG_RCK_PIN 10
 // D11 (COPI) -> SR 0 SIN pin
+#define SHIFTREG_SIN_PIN 11
 // D12 (CIPO) -> NC
 // D13 (SCK)  -> all SRs SRCK pin
-#define SHIFTREG_RCK_PIN 10
+#define SHIFTREG_SRCK_PIN 13
 
 // control button pins
 #define BTN_START_PIN 2 // with delay
@@ -21,11 +23,11 @@
 #define IR_OUT_PIN A1
 
 // LED pins
-#define A2 LED_5_PIN
-#define A3 LED_4_PIN
-#define A4 LED_3_PIN
-#define A5 LED_2_PIN
-#define A6 LED_1_PIN
-#define A7 LED_GO_PIN
+#define LED_5_PIN A2
+#define LED_4_PIN A3
+#define LED_3_PIN A4
+#define LED_2_PIN A5
+#define LED_1_PIN A6
+#define LED_GO_PIN A7
 
 #endif // PIN_DEFS_H
