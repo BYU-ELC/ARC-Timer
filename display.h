@@ -1,7 +1,7 @@
 // Author: Ben Broce (BYU ECEn ELC)
 
 // Display module for driving large 7-segment displays over Arduino SPI bus via
-// TPIC6B595 shift registers
+// TPIC6B595 power shift registers
 
 //////////////////////////////
 // 7-Segment Layout
