@@ -113,6 +113,8 @@ bool buttonsRead(buttonsIndex_t button) {
 // at the given button to false until button released (one-shot)
 bool buttonsReadOneShot(buttonsIndex_t button) {
   bool value = (currentState[button] == PRESSED_ST) && !oneShotFlag[button];
-  oneShotFlag[button] = true;
+  if (value) {
+    oneShotFlag[button] = true;
+  }
   return value;
 }
