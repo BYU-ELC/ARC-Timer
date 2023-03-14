@@ -25,7 +25,7 @@
 
 #include <stdint.h>
 
-#define DISPLAY_SHIFTREG_MAX_RATE 8000000 // max shift rate in Hz
+#define DISPLAY_SHIFTREG_MAX_RATE 10000000UL // max shift rate in Hz
 #define DISPLAY_DIGIT_DP_MASK 0x01  // "." - 0000001 (right of digit with mask)
 #define DISPLAY_DIGIT_CLR_MASK 0x00 // "" - 0000000 (clear byte)
 

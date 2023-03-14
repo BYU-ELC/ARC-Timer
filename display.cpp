@@ -20,36 +20,26 @@ const uint8_t displayDigit[10] = {
     0xDE  // "9" - 11011110
 };
 
-/*
-middle
-dp
-BR*
-TL
-BL
-B
-BR
-TR
-*/
+SPISettings tpic6b595(DISPLAY_SHIFTREG_MAX_RATE, MSBFIRST, SPI_MODE0);
 
 // initialize the display hardware (call before writes)
 void displayInit() {
-  // setup SPI bus for output
   pinMode(SHIFTREG_RCK_PIN, OUTPUT);
-  pinMode(SHIFTREG_SIN_PIN, OUTPUT);
-  pinMode(SHIFTREG_SRCK_PIN, OUTPUT);
+
+  // init SPI hardware, setup for output
+  SPI.begin();
 
   // release register values -> 7-seg output
   digitalWrite(SHIFTREG_RCK_PIN, HIGH);
-
-  // init SPI hardware
-  // (set max data rate, MSB first, and
-  // SPI_MODE1: clock idles low, bit write on rising clk)
-  SPI.beginTransaction(
-      SPISettings(DISPLAY_SHIFTREG_MAX_RATE, MSBFIRST, SPI_MODE1));
 }
 
 // write bytes to each display's shift register
 void displayWriteBytes(uint8_t left, uint8_t middle, uint8_t right) {
+  // prepare SPI hardware for a transaction
+  // (set max data rate, MSB first, and
+  // SPI_MODE1: clock idles low, bit write on rising clk)
+  SPI.beginTransaction(tpic6b595);
+
   // hold 7-seg output while writing data
   digitalWrite(SHIFTREG_RCK_PIN, LOW);
 
@@ -60,6 +50,9 @@ void displayWriteBytes(uint8_t left, uint8_t middle, uint8_t right) {
 
   // release reg values -> 7-seg to display new values
   digitalWrite(SHIFTREG_RCK_PIN, HIGH);
+
+  // release SPI hardware after transaction
+  SPI.endTransaction();
 }
 
 // write a time to the display in the format "M.SS"
