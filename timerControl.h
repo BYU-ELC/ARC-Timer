@@ -6,6 +6,8 @@
 #ifndef TIMER_CONTROL_H
 #define TIMER_CONTROL_H
 
+#define MATCH_TIME_MS 180000
+
 void timerControlInit();
 
 void timerControlTick();
