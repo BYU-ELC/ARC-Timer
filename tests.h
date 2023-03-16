@@ -101,7 +101,7 @@ Serial.print(buttonsRead(BTN_PAUSE));
 Serial.print(buttonsRead(BTN_RESUME));
 Serial.print(buttonsRead(BTN_ADD_30_SEC));
 Serial.print(buttonsRead(BTN_ADD_60_SEC));
-Serial.print(buttonsRead(BTN_MISC));
+Serial.print(buttonsRead(BTN_SUB_15_SEC));
 Serial.println("");
 
 digitalWrite(LED_5_PIN, buttonsRead(BTN_START));
@@ -109,5 +109,5 @@ digitalWrite(LED_4_PIN, buttonsRead(BTN_PAUSE));
 digitalWrite(LED_3_PIN, buttonsRead(BTN_RESUME));
 digitalWrite(LED_2_PIN, buttonsRead(BTN_ADD_30_SEC));
 digitalWrite(LED_1_PIN, buttonsRead(BTN_ADD_60_SEC));
-digitalWrite(LED_GO_PIN, buttonsRead(BTN_MISC));
+digitalWrite(LED_GO_PIN, buttonsRead(BTN_SUB_15_SEC));
 ****************************************************************************************/
