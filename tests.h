@@ -1,5 +1,5 @@
 /****************************************************************************************
-// Byte Alignment Test
+// Byte Alignment Test //
 
 //[SETUP]
 
@@ -20,7 +20,7 @@ if (!i) {
 ****************************************************************************************/
 
 /****************************************************************************************
-// Number Test
+// Number Test //
 
 //[SETUP]
 
@@ -36,7 +36,7 @@ delay(1000);
 ****************************************************************************************/
 
 /****************************************************************************************
-// Timer Test
+// Timer Test //
 
 //[GLOBAL]
 
@@ -73,4 +73,41 @@ if (elapsedTimeMS < END_TIME_MS) {
 }
 
 displayWriteTime(minutes, tenSeconds, seconds);
+****************************************************************************************/
+
+/****************************************************************************************
+// Buttons & LEDs Test //
+
+//[SETUP]
+
+// setup LEDs
+pinMode(LED_5_PIN, OUTPUT);
+pinMode(LED_4_PIN, OUTPUT);
+pinMode(LED_3_PIN, OUTPUT);
+pinMode(LED_2_PIN, OUTPUT);
+pinMode(LED_1_PIN, OUTPUT);
+pinMode(LED_GO_PIN, OUTPUT);
+// setup buttons
+buttonsInit();
+// serial debug
+Serial.begin(115200);
+
+//[LOOP]
+
+buttonsTick();
+
+Serial.print(buttonsRead(BTN_START));
+Serial.print(buttonsRead(BTN_PAUSE));
+Serial.print(buttonsRead(BTN_RESUME));
+Serial.print(buttonsRead(BTN_ADD_30_SEC));
+Serial.print(buttonsRead(BTN_ADD_60_SEC));
+Serial.print(buttonsRead(BTN_MISC));
+Serial.println("");
+
+digitalWrite(LED_5_PIN, buttonsRead(BTN_START));
+digitalWrite(LED_4_PIN, buttonsRead(BTN_PAUSE));
+digitalWrite(LED_3_PIN, buttonsRead(BTN_RESUME));
+digitalWrite(LED_2_PIN, buttonsRead(BTN_ADD_30_SEC));
+digitalWrite(LED_1_PIN, buttonsRead(BTN_ADD_60_SEC));
+digitalWrite(LED_GO_PIN, buttonsRead(BTN_MISC));
 ****************************************************************************************/

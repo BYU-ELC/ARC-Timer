@@ -13,10 +13,10 @@
 #ifndef BUTTONS_H
 #define BUTTONS_H
 
+#include <stdbool.h>
+
 #define BTN_COUNT 6
 #define BTN_DEBOUNCE_PERIOD_MS 50
-
-#include <stdbool.h>
 
 // arrange buttons in order for indexing (not pin assignment)
 // NOTE: order must match array buttonPins in buttons.cpp

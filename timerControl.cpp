@@ -1,7 +1,5 @@
-#ifndef TIMER_CONTROL_H
-#define TIMER_CONTROL_H
-
 #include "timerControl.h"
+#include "buttons.h"
 #include "display.h"
 #include <Arduino.h>
 
@@ -83,5 +81,3 @@ void timerControlTick() {
 #endif
   }
 }
-
-#endif // TIMER_CONTROL_H
