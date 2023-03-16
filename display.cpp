@@ -64,7 +64,7 @@ void displayWriteTime(uint8_t min, uint8_t tenSec, uint8_t oneSec) {
 // write a time to the display given the time in MS
 void displayWriteTimeMS(uint32_t timeMS) {
   // 1000 ms per second
-  uint8_t seconds = timeMS / 1000;
+  uint16_t seconds = timeMS / 1000;
   // 60 seconds per minute (seconds -> remainder seconds)
   uint8_t minutes = seconds / 60;
   seconds = seconds % 60;

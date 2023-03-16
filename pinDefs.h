@@ -29,7 +29,7 @@
 #define LED_4_PIN A3
 #define LED_3_PIN A4
 #define LED_2_PIN A5
-#define LED_1_PIN A6
-#define LED_GO_PIN A7
+#define LED_1_PIN 8
+#define LED_GO_PIN 9
 
 #endif // PIN_DEFS_H

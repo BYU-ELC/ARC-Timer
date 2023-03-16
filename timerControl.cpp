@@ -9,13 +9,13 @@
 #include <stdint.h>
 
 // #define TIMER_CONTROL_DEBUG
-#define MS_PER_SECOND 1000UL
-#define MS_PER_15_SECONDS 15000UL
-#define MS_PER_30_SECONDS 30000UL
-#define MS_PER_60_SECONDS 60000UL
+#define MS_PER_SECOND 1000L
+#define MS_PER_15_SECONDS 15000L
+#define MS_PER_30_SECONDS 30000L
+#define MS_PER_60_SECONDS 60000L
 
 // helper functions
-static uint32_t currentTimeMS();
+static int32_t currentTimeMS();
 static void updateTimerTargetMS();
 
 enum timerControlState_t {
@@ -27,7 +27,7 @@ static enum timerControlState_t currentState;
 
 // time to count down from (full match time, time remaining @ pause)
 // (add increments, sub decrements)
-static uint32_t timerTargetMS;
+static int32_t timerTargetMS;
 // millis() timestamp of last timer start
 static uint32_t timerStartTimeMS;
 // millis() timestamp for small interval timing
@@ -66,13 +66,15 @@ void timerControlTick() {
       countDownVal = LED_COUNT;
     } else if (countDownVal == 0) {
       currentState = RUN_ST;
+      countDownVal = LED_COUNT;
       timerStartTimeMS = millis();
     }
     break;
 
   case RUN_ST:
-    if (buttonsReadOneShot(BTN_PAUSE)) {
+    if (buttonsReadOneShot(BTN_PAUSE) || (currentTimeMS() <= 0)) {
       currentState = PAUSE_ST;
+      ledsClear();
       // set new timer target to time remaining
       timerTargetMS -= (millis() - timerStartTimeMS);
     }
@@ -116,7 +118,7 @@ void timerControlTick() {
   }
 }
 
-static uint32_t currentTimeMS() {
+static int32_t currentTimeMS() {
   // current time = (current target) - (current runtime)
   return (timerTargetMS - (millis() - timerStartTimeMS));
 }
