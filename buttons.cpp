@@ -13,7 +13,7 @@ static void buttonTick(uint8_t button);
 // NOTE: order must match enum buttonsIndex_t in buttons.h
 static const uint8_t buttonPins[BTN_COUNT] = {
     BTN_START_PIN,      BTN_PAUSE_PIN,      BTN_RESUME_PIN,
-    BTN_ADD_30_SEC_PIN, BTN_ADD_60_SEC_PIN, BTN_MISC_PIN};
+    BTN_ADD_30_SEC_PIN, BTN_ADD_60_SEC_PIN, BTN_SUB_15_SEC_PIN};
 
 // debounce SM states (per button)
 enum buttonsState_t {

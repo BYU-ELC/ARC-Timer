@@ -26,7 +26,7 @@ enum buttonsIndex_t {
   BTN_RESUME = 2,
   BTN_ADD_30_SEC = 3,
   BTN_ADD_60_SEC = 4,
-  BTN_MISC = 5
+  BTN_SUB_15_SEC = 5
 };
 
 // setup button state machine

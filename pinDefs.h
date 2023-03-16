@@ -1,6 +1,8 @@
 #ifndef PIN_DEFS_H
 #define PIN_DEFS_H
 
+#include <Arduino.h>
+
 // display control via shift registers (SRs) on SPI port
 // D10 (CS)   -> all SRs RCK latch pin
 #define SHIFTREG_RCK_PIN 10
@@ -16,7 +18,7 @@
 #define BTN_RESUME_PIN 4 // without delay
 #define BTN_ADD_30_SEC_PIN 5
 #define BTN_ADD_60_SEC_PIN 6
-#define BTN_MISC_PIN 7
+#define BTN_SUB_15_SEC_PIN 7
 
 // infrared control signal pins
 #define IR_IN_PIN A0
