@@ -24,13 +24,13 @@ SPISettings tpic6b595(DISPLAY_SHIFTREG_MAX_RATE, MSBFIRST, SPI_MODE0);
 
 // initialize the display hardware (call before writes)
 void displayInit() {
-  pinMode(SHIFTREG_RCK_PIN, OUTPUT);
-
   // init SPI hardware, setup for output
   SPI.begin();
-
+  pinMode(SHIFTREG_RCK_PIN, OUTPUT);
   // release register values -> 7-seg output
   digitalWrite(SHIFTREG_RCK_PIN, HIGH);
+  // clear display
+  displayClear();
 }
 
 // write bytes to each display's shift register
@@ -59,6 +59,20 @@ void displayWriteBytes(uint8_t left, uint8_t middle, uint8_t right) {
 void displayWriteTime(uint8_t min, uint8_t tenSec, uint8_t oneSec) {
   displayWriteBytes((displayDigit[min] | DISPLAY_DIGIT_DP_MASK),
                     displayDigit[tenSec], displayDigit[oneSec]);
+}
+
+// write a time to the display given the time in MS
+void displayWriteTimeMS(uint32_t timeMS) {
+  // 1000 ms per second
+  uint8_t seconds = timeMS / 1000;
+  // 60 seconds per minute (seconds -> remainder seconds)
+  uint8_t minutes = seconds / 60;
+  seconds = seconds % 60;
+  // 10 seconds per tenSecond (seconds -> remainder seconds)
+  uint8_t tenSeconds = seconds / 10;
+  seconds = seconds % 10;
+
+  displayWriteTime(minutes, tenSeconds, seconds);
 }
 
 // turn off all display segments

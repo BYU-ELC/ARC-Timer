@@ -39,6 +39,9 @@ void displayInit();
 // write a time to the display in the format "M.SS"
 void displayWriteTime(uint8_t min, uint8_t tenSec, uint8_t oneSec);
 
+// write a time to the display given the time in MS
+void displayWriteTimeMS(uint32_t timeMS);
+
 // write bytes to each display's shift register
 void displayWriteBytes(uint8_t left, uint8_t middle, uint8_t right);
 
