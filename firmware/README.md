@@ -8,3 +8,7 @@ Follow the project file structure laid out at: http://www.gammon.com.au/forum/?i
 ```firmware.ino``` is the main project file.
 
 Pin definitions can be set in ```pinDefs.h```.
+
+**Firmware Organization:**
+
+![Project Organization](organization.svg "Organization")
