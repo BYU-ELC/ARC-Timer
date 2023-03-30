@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" modified="2023-03-30T17:39:09.129Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="2SKCrrBLLNaq3EyFpYv0" version="21.1.2" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1434" dy="894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0BuWfrNRM4vyGTSUAE7y-1" target="0BuWfrNRM4vyGTSUAE7y-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-1" value="&lt;b&gt;firmware.ino&lt;br&gt;&lt;/b&gt;&lt;br&gt;init SMs,&lt;br&gt;tick SMs" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="160" y="120" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0BuWfrNRM4vyGTSUAE7y-2" target="0BuWfrNRM4vyGTSUAE7y-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0BuWfrNRM4vyGTSUAE7y-2" target="0BuWfrNRM4vyGTSUAE7y-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0BuWfrNRM4vyGTSUAE7y-2" target="0BuWfrNRM4vyGTSUAE7y-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0BuWfrNRM4vyGTSUAE7y-2" target="0BuWfrNRM4vyGTSUAE7y-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-2" value="&lt;b&gt;timerControl&lt;br&gt;&lt;/b&gt;&lt;br&gt;State Machine&lt;br&gt;- PAUSE&lt;br&gt;- START&lt;br&gt;- RUN&lt;br&gt;&lt;br&gt;track time,&lt;br&gt;control hardware" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="350" y="80" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-4" value="&lt;b&gt;buttons.cpp/.h&lt;br&gt;&lt;/b&gt;&lt;br&gt;SM for debounce and optional one-shot" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="480" y="360" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-9" value="&lt;b&gt;leds.cpp/.h&lt;br&gt;&lt;/b&gt;&lt;br&gt;LED 5-second countdown control" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="480" y="450" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-10" value="&lt;b&gt;infrared.cpp/.h&lt;br&gt;&lt;/b&gt;&lt;br&gt;Infrared start input / output control" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="480" y="540" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-11" value="&lt;b&gt;display.cpp/.h&lt;br&gt;&lt;/b&gt;&lt;br&gt;functions to control 7-segment displays over SPI" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="480" y="250" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0BuWfrNRM4vyGTSUAE7y-12" value="&lt;b&gt;pinDefs.h&lt;/b&gt;&lt;br&gt;&lt;br&gt;Assign pins to their functions" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="160" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
