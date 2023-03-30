@@ -5674,13 +5674,6 @@ high speed (Philips)</description>
 <wire x1="124.46" y1="223.52" x2="147.32" y2="223.52" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="SP1" gate="G$1" pin="SOUT"/>
-<pinref part="SP2" gate="G$1" pin="SIN"/>
-<wire x1="177.8" y1="223.52" x2="193.04" y2="223.52" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="PCB1" gate="PCB" pin="D13-SCK"/>
@@ -5728,9 +5721,6 @@ high speed (Philips)</description>
 <segment>
 <pinref part="PCB1" gate="PCB" pin="RESET"/>
 <wire x1="30.48" y1="236.22" x2="27.94" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="PCB1" gate="PCB" pin="RESET@2"/>
-<wire x1="27.94" y1="233.68" x2="30.48" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="233.68" x2="27.94" y2="236.22" width="0.1524" layer="91"/>
 <label x="27.94" y="236.22" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -5791,6 +5781,11 @@ high speed (Philips)</description>
 <pinref part="SP0" gate="G$1" pin="D0"/>
 <wire x1="93.98" y1="220.98" x2="91.44" y2="220.98" width="0.1524" layer="91"/>
 <label x="91.44" y="220.98" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CURRLIM0" gate="G$1" pin="2"/>
+<wire x1="68.58" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
+<label x="68.58" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A0" class="0">
@@ -5863,11 +5858,6 @@ high speed (Philips)</description>
 <pinref part="MINUTES" gate="G$1" pin="D"/>
 <wire x1="48.26" y1="53.34" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
 <label x="45.72" y="53.34" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="CURRLIM0" gate="G$1" pin="2"/>
-<wire x1="68.58" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
-<label x="68.58" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DP1" class="0">
@@ -6286,6 +6276,19 @@ high speed (Philips)</description>
 <pinref part="PCB1" gate="PCB" pin="D3`-INTR"/>
 <wire x1="66.04" y1="243.84" x2="68.58" y2="243.84" width="0.1524" layer="91"/>
 <label x="71.12" y="243.84" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="SP1" gate="G$1" pin="SOUT"/>
+<pinref part="SP2" gate="G$1" pin="SIN"/>
+<wire x1="177.8" y1="223.52" x2="193.04" y2="223.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="PCB1" gate="PCB" pin="RESET@2"/>
+<wire x1="27.94" y1="233.68" x2="30.48" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
