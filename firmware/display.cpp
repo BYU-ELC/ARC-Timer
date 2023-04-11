@@ -44,9 +44,9 @@ void displayWriteBytes(uint8_t left, uint8_t middle, uint8_t right) {
   digitalWrite(SHIFTREG_RCK_PIN, LOW);
 
   // write bytes in order: left, middle, right digit
-  SPI.transfer(left);
-  SPI.transfer(middle);
   SPI.transfer(right);
+  SPI.transfer(middle);
+  SPI.transfer(left);
 
   // release reg values -> 7-seg to display new values
   digitalWrite(SHIFTREG_RCK_PIN, HIGH);
