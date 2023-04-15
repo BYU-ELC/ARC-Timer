@@ -67,6 +67,7 @@ void timerControlTick() {
     } else if (countDownVal == 0) {
       currentState = RUN_ST;
       countDownVal = LED_COUNT;
+      ledsClearAllButGo();
       timerStartTimeMS = millis();
     }
     break;

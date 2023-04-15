@@ -16,4 +16,4 @@ void infraredInit() {
 void infraredWrite(bool state) { digitalWrite(IR_OUT_PIN, state); }
 
 // read infrared input
-bool infraredRead() { return digitalRead(IR_IN_PIN); }
+bool infraredRead() { return !digitalRead(IR_IN_PIN); }

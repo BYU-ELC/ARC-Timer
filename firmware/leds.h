@@ -22,6 +22,9 @@ void ledsInit();
 // clear LEDs
 void ledsClear();
 
+// clear LEDs except green
+void ledsClearAllButGo();
+
 // light LEDs corresponding to the current countdown value
 // 5 (1 lit), 4 (2 lit), ..., 1 (5 lit), GO (6 lit, including green)
 void ledsWriteCount(uint8_t countdownVal);
