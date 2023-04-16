@@ -1,0 +1,14 @@
+Partlist exported from C:/Users/ShopTechs/Documents/EAGLE/projects/IR Sensor - ARC/IR Sensor.sch at 4/5/2023 1:54 PM
+
+Qty Value     Device      Package  Parts  Description                                            MF MPN    OC_FARNELL OC_NEWARK POPULARITY PROD_ID   SPICEMODEL SPICEPREFIX SPICEPREFIXL
+1             PINHD-1X4   1X04     JP1    PIN HEADER                                                                            91                                                      
+1             R-TRIMM64W  RTRIM64W P1     Trimm resistor                                                                        0                    X                      POT         
+1   100       R-US_0204/7 0204/7   R6     RESISTOR, American symbol                                                             48                              R                       
+1   100k      R-US_0204/7 0204/7   R1     RESISTOR, American symbol                                                             48                              R                       
+1   1k        R-US_0204/7 0204/7   R4     RESISTOR, American symbol                                                             48                              R                       
+1   270k      R-US_0204/7 0204/7   R2     RESISTOR, American symbol                                                             48                              R                       
+1   460k      R-US_0204/7 0204/7   R5     RESISTOR, American symbol                                                             48                              R                       
+1   550k      R-US_0204/7 0204/7   R3     RESISTOR, American symbol                                                             48                              R                       
+2   BPX65     BPX65       BPX65    D1, D2 PHOTO DIODE                                               BPX65. 327451     06WX2764  0                                                       
+1   Green 3mm LED3MM      LED_3MM  D3     LED (Generic)                                                                                    DIO-08794                                    
+2   VN2222KM  VN2222KM    TO237    Q1, Q2 N-Channel Enhancement MOSFET (VMOS); 60V; 0,5A; 7,5Ohm                                1                                                       
