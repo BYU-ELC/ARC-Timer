@@ -53,6 +53,7 @@ void timerControlTick() {
     if (buttonsReadOneShot(BTN_START) || infraredRead()) {
       currentState = START_ST;
       intervalStartTimeMS = millis();
+      countDownVal = (LED_COUNT - 1);
     } else if (buttonsReadOneShot(BTN_RESUME)) {
       currentState = RUN_ST;
       timerStartTimeMS = millis();
@@ -63,10 +64,8 @@ void timerControlTick() {
     if (buttonsReadOneShot(BTN_PAUSE)) {
       currentState = PAUSE_ST;
       ledsClear();
-      countDownVal = LED_COUNT;
     } else if (countDownVal == 0) {
       currentState = RUN_ST;
-      countDownVal = LED_COUNT;
       ledsClearAllButGo();
       timerStartTimeMS = millis();
     }
