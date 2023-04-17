@@ -7,7 +7,7 @@
 
 // setup, clear infrared pins
 void infraredInit() {
-  pinMode(IR_IN_PIN, INPUT);
+  pinMode(IR_IN_PIN, INPUT_PULLUP);
   pinMode(IR_OUT_PIN, OUTPUT);
   digitalWrite(IR_OUT_PIN, LOW);
 }
